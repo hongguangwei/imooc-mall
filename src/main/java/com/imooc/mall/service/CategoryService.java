@@ -24,4 +24,5 @@ public interface CategoryService {
 
     @Cacheable(value = "listCategoryForCustomer")
     List<CategoryVO> listCategoryForCustomer(Integer parentId);
+
 }

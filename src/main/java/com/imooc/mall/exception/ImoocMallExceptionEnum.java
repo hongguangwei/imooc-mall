@@ -37,7 +37,12 @@ public enum ImoocMallExceptionEnum {
 
     MKDIR_FAILED(10013,"文件夹创建失败"),
 
-    UPLOAD_FAILED(10013,"图片上传失败");
+    UPLOAD_FAILED(10013,"图片上传失败"),
+
+    NOT_SALE(10014,"商品状态不可售"),
+
+    NOT_ENOUGH(10015,"商品库存不足");
+
 
 
     Integer code;

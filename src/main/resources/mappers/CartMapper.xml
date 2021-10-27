@@ -104,7 +104,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.imooc.mall.model.pojo.Cart">
+<update id="updateByPrimaryKey" parameterType="com.imooc.mall.model.pojo.Cart">
     update imooc_mall_cart
     set product_id = #{productId,jdbcType=INTEGER},
       user_id = #{userId,jdbcType=INTEGER},
@@ -114,4 +114,11 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectCartByUserIdAndProductId" resultMap="BaseResultMap" parameterType="map">
+    select
+    <include refid="Base_Column_List"></include>
+    from imooc_mall_cart
+    where user_id = #{userId}
+    and product_id = #{productId}
+  </select>
 </mapper>
