@@ -27,16 +27,4 @@ public class UserFilterConfig {
         return filterRegistrationBean;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
